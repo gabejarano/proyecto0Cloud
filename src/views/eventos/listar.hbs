@@ -1,0 +1,40 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each eventosAlReves}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <a >
+                        <h3 class="card-title text-uppercase">
+                            {{nombre}}
+                        </h3>
+                    </a>
+                    <p class="m-2"> Lugar: {{lugar}}</p>
+                    <p class="m-2"> Direccion: {{direccion}}</p>
+                    <p class="m-2"> Fecha de inicio: {{timeago fechainicial}}</p>
+                    <a class="btn btn-success" href="/eventos/{{id}}">
+                        Ver Evento
+                    </a>
+                    <a class="btn btn-danger" href="/eventos/delete/{{id}}">
+                        Eliminar Evento
+                    </a>
+                    <a class="btn btn-secondary" href="/eventos/edit/{{id}}">
+                        Editar Evento
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card-body text-center">
+                <p>No hay eventos creados aun</p>
+                <h1>¡Crea uno!</h1>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <hr>
+    <div class="box-footer clearfix">
+                <a class="btn btn-sm btn-info btn-flat pull-left" href="/eventos/add" >Agregar evento</a>
+    </div>
+</div>

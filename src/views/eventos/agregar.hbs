@@ -1,0 +1,55 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body ">
+                    <form action="/eventos/add" method="POST">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" name="nombre" placeholder="Nombre" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label>Categoria</label>
+                            <select class="form-control" name="categoria">
+                                <option value="" selected></option>
+                                <option value="conferencia">Conferencia</option>
+                                <option value="seminario">Seminario</option>
+                                <option value="congreso">Congreso</option>
+                                <option value="curso">Curso</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Lugar</label>
+                            <input type="text" class="form-control" name="lugar" placeholder="Lugar" >
+                        </div>
+                        <div class="form-group">
+                            <label>Dirección</label>
+                            <input type="text" class="form-control" name="direccion" placeholder="Dirección" >
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha Inicio</label>
+                            <input type="date" class="form-control" name="fechainicial" placeholder="Fecha Inicio" >
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha Fin</label>
+                            <input type="date" class="form-control" name="fechafinal" placeholder="Fecha Fin" >
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo Evento (Presencial ó Virtual)</label>
+                            <select class="form-control" name="presencial">
+                                <option value="" selected></option>
+                                <option value="0">Virtual</option>
+                                <option value="1">Presencial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

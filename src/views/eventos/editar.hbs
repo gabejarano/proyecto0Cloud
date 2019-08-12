@@ -1,0 +1,57 @@
+<div class="col-md-4 mx-auto p-4">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/eventos/edit/{{evento.id}}" method="POST">
+
+
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" value="{{evento.nombre}}"
+                        autofocus>
+                </div>
+                <div class="form-group">
+                    <label>Categoria</label>
+                    <select class="form-control" name="categoria" >
+                        <option value="{{evento.categoria}}" selected> {{evento.categoria}} </option>
+                        <option value="conferencia">Conferencia</option>
+                        <option value="seminario">Seminario</option>
+                        <option value="congreso">Congreso</option>
+                        <option value="curso">Curso</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Lugar</label>
+                    <input type="text" class="form-control" name="lugar" placeholder="Lugar" value="{{evento.lugar}}">
+                </div>
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" class="form-control" name="direccion" placeholder="Dirección"
+                        value="{{evento.direccion}}">
+                </div>
+                <div class="form-group">
+                    <label>Fecha Inicio</label>
+                    <input type="date" class="form-control" name="fechainicial" placeholder="Fecha Inicio"
+                        value="{{evento.fechainicial}}">
+                </div>
+                <div class="form-group">
+                    <label>Fecha Fin</label>
+                    <input type="date" class="form-control" name="fechafinal" placeholder="Fecha Fin">
+                </div>
+                <div class="form-group">
+                    <label>Presencial</label>
+                    <select class="form-control" name="presencial">
+                        <option value="{{evento.presencial}}"selected>{{evento.presencial}}</option>
+                        <option value="0">Virtual</option>
+                        <option value="1">Presencial</option>
+                    </select>
+                </div>
+                <button class="btn btn-success btn-block">
+                    Save
+                </button>
+        </div>
+        </form>
+    </div>
+</div>
+</div>
