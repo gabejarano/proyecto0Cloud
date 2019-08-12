@@ -28,13 +28,13 @@ router.post('/eventos/add', isLoggedIn, async (req,res)=>{
         user_id: req.user.id
     }
     console.log(newEvento);
-    await db.query('INSERT INTO EVENTOS set ?' ,[newEvento]);
+    await db.query('INSERT INTO eventos set ?' ,[newEvento]);
     req.flash('success', 'Evento guardado correctamente');
     res.redirect('/eventos')
 });
 
 router.get('/eventos', isLoggedIn, async(req,res)=>{
-    const eventos= await db.query('SELECT * FROM EVENTOS where user_id =?', [req.user.id]);
+    const eventos= await db.query('SELECT * FROM eventos where user_id =?', [req.user.id]);
     
     
     res.render('eventos/listar', {eventosAlReves: eventos.reverse()})
